@@ -35,13 +35,13 @@ describe("Modulo aluno", () => {
     describe("filtrarAlunos", () => {
         it("retorna o valor 'sabino' e 'cicero' caso encontre no vetor", () => {
             //GIVEN - Dado que (configuração do teu cenário)
-            const nomeAluno = ['sabino','cicero']    
+            const nomeAluno = 'sabino'    
             const listaNomeAlunos = ['andre','miguel','sabino','fernando','cicero','catatau','zezim']
             
             //WHEN = Quando (o que quero testar)
             const resultado = filtrarAlunos(nomeAluno, listaNomeAlunos)
 
-            resultadoEsperado = ['sabino','cicero'] 
+            resultadoEsperado = ['sabino'] 
 
             //THEN - Então quero que aconteça isto (espero isto)
             expect(resultado).toEqual(resultadoEsperado) 

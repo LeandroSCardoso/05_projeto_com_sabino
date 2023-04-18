@@ -1,3 +1,5 @@
+import css from "./style.css"
+
 const { soma, subtracao, multiplicacao, divisao } = require("./calculadora");
 
 console.log("== Script principal ==")

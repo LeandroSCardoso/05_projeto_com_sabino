@@ -4,7 +4,7 @@ const { encontrarAluno, filtrarAlunos, construirAluno } = require("./aluno")
 describe("Modulo aluno", () => {
 
     describe("encontrarAluno", () => {
-        it("retorna um texto dizendo se encotrou o valor dentro do vetor 'encontrei' ou 'não encontrei'", () => {
+        it("retorna um texto dizendo se encotrou o valor dentro do vetor retornando 'encontrei'", () => {
             //GIVEN - Dado que (configuração do teu cenário)
             const nomeAluno = 'leoncio'    
             const listaNomeAlunos = ['andre','miguel','leoncio','fernando']
@@ -15,7 +15,20 @@ describe("Modulo aluno", () => {
             //THEN - Então quero que aconteça isto (espero isto)
             expect(resultado).toBe("encontrei") 
         })    
-   
+
+        
+        it("retorna um texto dizendo se encotrou o valor dentro do vetor retornando 'não encontrei'", () => {
+            //GIVEN - Dado que (configuração do teu cenário)
+            const nomeAluno = 'Xpita'    
+            const listaNomeAlunos = ['andre','miguel','leoncio','fernando']
+            
+            //WHEN = Quando (o que quero testar)
+            const resultado = encontrarAluno(nomeAluno, listaNomeAlunos)
+            
+            //THEN - Então quero que aconteça isto (espero isto)
+            expect(resultado).toBe("não encontrei") 
+        })    
+
     })
 
 
@@ -28,8 +41,10 @@ describe("Modulo aluno", () => {
             //WHEN = Quando (o que quero testar)
             const resultado = filtrarAlunos(nomeAluno, listaNomeAlunos)
 
+            resultadoEsperado = ['sabino','cicero'] 
+
             //THEN - Então quero que aconteça isto (espero isto)
-            expect(resultado).toEqual(['sabino','cicero']) 
+            expect(resultado).toEqual(resultadoEsperado) 
         })    
 
         it("retorna um vetor vazio caso não encontre 'sabino' e 'cicero'", () => {
@@ -40,8 +55,10 @@ describe("Modulo aluno", () => {
             //WHEN = Quando (o que quero testar)
             const resultado = filtrarAlunos(nomeAluno, listaNomeAlunos)
 
+            resultadoEsperado = []
+
             //THEN - Então quero que aconteça isto (espero isto)
-            expect(resultado).toEqual([]) 
+            expect(resultado).toEqual(resultadoEsperado) 
         })    
 
     })

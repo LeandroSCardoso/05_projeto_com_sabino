@@ -1,1 +1,6 @@
-# 05_projeto_com_sabino
+# PRIMEIRO PROJETO NODEJS 
+
+# Linguagem
+- html
+- css
+- javascript

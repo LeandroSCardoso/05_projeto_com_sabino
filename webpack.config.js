@@ -25,8 +25,8 @@ module.exports = {
                 exclude: /node_modules/, // Ignora a pasta node_modules
                 loader: 'babel-loader'
             },
-            /* {
-                test: /\.s(a|c)ss$/, // Pegando todos os arquivos sass, scss ou css
+            {
+                test: /\.(sa|sc|c)ss$/, // Pegando todos os arquivos sass, scss ou css
                 exclude: /node_modules/, // Ignora a pasta node_modules
                 use: [
                     { loader: 'style-loader' },
@@ -37,11 +37,6 @@ module.exports = {
                         loader: 'sass-loader'
                     }
                 ]
-            } */
-            {
-                test: /\.css$/,
-                exclude: /node_modules/, // Ignora a pasta node_modules
-                use: ['style-loader', 'css-loader']
             }
         ]
     },
